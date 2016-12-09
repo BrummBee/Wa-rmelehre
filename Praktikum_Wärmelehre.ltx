@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[ngerman]{babel} % deutsche Silbentrennug
+\usepackage[latin1]{inputenc} %für die deutschen Umlaute
+\usepackage{amsmath} 	%mathematische Formeln
+\usepackage{graphicx}	%Grafiken importieren
+\usepackage{float} %Grafiken fixieren
+\usepackage{color}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\newcommand*{\titleGM}{\begingroup % Create the command for including the title page in the document
+\hbox{ % Horizontal box
+\hspace*{0.2\textwidth} % Whitespace to the left of the title page
+\rule{1pt}{\textheight} % Vertical line
+\hspace*{0.05\textwidth} % Whitespace between the vertical line and title page text
+\parbox[b]{0.75\textwidth}{ % Paragraph box which restricts text to less than the width of the page
+
+{\noindent\Huge\bfseries 1 Wärmelehre \\[0.5\baselineskip]}\\[2\baselineskip] % Title
+{\large \textit{1. Dezember 2016}}\\[4\baselineskip] % Tagline or further description
+{\Large \textsc{Lukas Bühler, Jérôme Landtwing (M4a)}} % Author name
+
+\vspace{0.5\textheight} % Whitespace between the title block and the publisher
+{\noindent Markus Hägi, KSA  }\\[\baselineskip] % Publisher and logo
+}}
+\endgroup}
+
+\begin{document}
+\thispagestyle{empty}
+\titleGM % This command includes the title page
+\end{document}
