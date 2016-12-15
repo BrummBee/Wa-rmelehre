@@ -1,57 +1,0 @@
-\documentclass{article}
-\usepackage[ngerman]{babel} % deutsche Silbentrennug
-\usepackage[latin1]{inputenc} %für die deutschen Umlaute
-\usepackage{amsmath} 	%mathematische Formeln
-\usepackage{graphicx}	%Grafiken importieren
-\usepackage{float} %Grafiken fixieren
-\usepackage{color}
-
-%----------------------------------------------------------------------------------------
-%	TITLE PAGE
-%----------------------------------------------------------------------------------------
-
-\newcommand*{\titleGM}{\begingroup % Create the command for including the title page in the document
-\hbox{ % Horizontal box
-\hspace*{0.2\textwidth} % Whitespace to the left of the title page
-\rule{1pt}{\textheight} % Vertical line
-\hspace*{0.05\textwidth} % Whitespace between the vertical line and title page text
-\parbox[b]{0.75\textwidth}{ % Paragraph box which restricts text to less than the width of the page
-
-{\noindent\Huge\bfseries 1 Wärmelehre \\[0.5\baselineskip]}\\[2\baselineskip] % Title
-{\large \textit{1. Dezember 2016}}\\[4\baselineskip] % Tagline or further description
-{\Large \textsc{Lukas Bühler, Jérôme Landtwing (M4a)}} % Author name
-
-\vspace{0.5\textheight} % Whitespace between the title block and the publisher
-{\noindent Markus Hägi, KSA  }\\[\baselineskip] % Publisher and logo
-}}
-\endgroup}
-
-\begin{document}
-\thispagestyle{empty}
-\titleGM % This command includes the title page
-In diesem Praktikum war es das Ziel die Wärmekapazität von Wasser zu bestimmen und die Wärmeverluste zu erfassen.
-\section{Theorie} 
-Beim Erwärmen eines Körper wird Energie in Form von Wärme ($\triangle Q$) hinzugefügt. Die Temperatur des Körpers hat vor dem Erhitzen eine Anfangstemperatur $\vartheta$ 1 und nach der Erhitzung einen Endwert $\vartheta$ 2. Die Temperaturerhöhung $\triangle \vartheta$ ergibt sich aus:\begin{equation} \triangle \vartheta = \vartheta 2 - \vartheta 1 \end{equation}Die Temperaturerhöhung ist proportional zur Masse des Körpers und lässt sich in folgenden Bezug zur Wärmeenergie stellen:\begin{equation} \triangle Q = c * m * \triangle \vartheta \end{equation}c ist eine Materialkonstante für Wärme und ist vom Material des Körpers abhängig. Sie heisst spezifische Wärmekapazität.\begin{equation} C = \frac{ \delta Q }{ m * \delta \vartheta} \end{equation} Sie hat die Einheit $J\cdot kg^{-1} \cdot K^{-1}$ und beschreibt wie viel Energie es braucht um ein Material zu erhitzen. \\ \\
-
-Diese Prinzipien lassen sich auch auf Flüssigkeiten übertragen. In diesem Praktikum erhitzen wir Flüssigkeiten mit einem Tauchsieder, welcher eine Widerstandsheizung ist. Das heisst er Produziert wärme mit elektrischem Strom durch einen im Stromkreis enthaltenen Widerstand. \\ Man kann die Wärmemenge wie folgt berechnen: \\
-\begin{equation} \vartheta Q = U \cdot I \cdot \triangle t \end{equation}Beim Heizen gibt es im Normalfall auch Wärmeverluste. Es gibt also einen weiteren Punkt, welchem man Beachtung schenken muss bei der Berechnung der Wärmekapazität. Ebenfalls ändert sich der Fehler von dem Wert der Wärmekapazität.\\
-Man kann natürlich versuchen die Wärmeverluste durch eine gute Isolierung möglichst klein zu halten. Bei Flüssigkeiten erhitzt man trotz einer Isolierung das Gefäss aber trotzdem mit. Man kann mit der Spezifischen Wärmekapazität des Gefässes hingegen die zum Gefäss zugeführte Energie von der gesamten zugeführten Energie abziehen und somit eine genauere Wärmekapazität für die Flüssigkeit berechnen.\begin{equation} \triangle Q _{\text{effektiv}} = \triangle Q _{\text{zugeführt}} - \triangle Q _{\text{Gefäss}} \end{equation}
-Man kann mit den Obigen Methoden auch den Wärmeaustausch zwischen Festkörpern und Flüssigkeiten anschauen. Wenn man zum Beispiel einen heisseren Körper in ein kaltes Wasserbad taucht so wird sich das Wasser erhitzen und am Ende werden der Festkörper und das Wasser beide dieselbe Endtemperatur haben. In diesem Fall kann die folgende Gleichung aufstellen:\begin{equation} \triangle Q_K = c_K \cdot m_K \cdot (\vartheta_K - \vartheta) \end{equation}\begin{equation} \triangle Q_W = c_W \cdot m_W \cdot (\vartheta - \vartheta_W) \end{equation}\begin{equation} C_K = c_W \cdot \frac{m_W \cdot (\vartheta - \vartheta_W)}{m_K \cdot (\vartheta_K - \vartheta}) \end{equation}Wobei $\triangle Q_K$ für den Wärmeänderung des Körpers steht, $c_K$ ist der Wärmekapazität des Festkörpers, $m_K$ die Masse des Körpers, $\vartheta_K$ ist die Anfangstemperatur des Körpers und $\vartheta$ die gemeinsame Gesamttemperatur.Dasselbe lässt sich für die Flüssigkeit aussagen und somit steht $Q_W$ für die Wärmeänderung des Wassers, $c_W$ für die Wärmekapazität von Wasser, $m_W$ für das Gewicht des Wassers, $\vartheta_W$ für die Anfangstemperatur des Wassers und $\vartheta$ wieder für die gemeinsame Gesamttemperatur.Mit der erhaltenen Gleichung können wir nun die spezifische Wärmekapazität des Festkörpers berechnen und wir werden sie in diesem Praktikum verwenden.%%
-%%
-%%
-\section{Grundprogramm: Heizen von Wasser} Im Grundprogramm war es die Aufgabe Wasser aufzuheizen und mit den benötigten Daten die spezifische Wärmekapazität von Wasser zu berechnen. 
-\subsection{Aufbau} Der Versuchsaufbau bestand aus einem Stromkreis mit dem Tauchsieder, welcher in einem Gefäss gefüllt mit Wasser weilte. In diesem Gefäss war ausserdem ein Thermometer platziert um die Temperatur der Flüssigkeit abzulesen. Das Gefäss war mit EPS isoliert um Wärmeverluste zu vermeiden, sie konnten jedoch nicht ausgeschlossen werden. (Zum Wärmeverlust kommen wir im Wahlversuch "Wärmeverluste" noch einmal.) Der Stromkreis bestand aus einer Spannungsquelle, dem Netzteil, sowie einem Schalter und dem schon genannten Tauchsieder, welcher durch einen elektrischen Widerstand wärme produzierte. Der Tauchsieder war bestand aus einem gewickelten Konstantan Draht mit bestimmter Länge, welchen wir zuvor selbst abgeschnitten und gewickelt hatten. Nun wurde das Gefäss mit IT-Wasser bestimmter Masse gefüllt und ein EPS-Deckel aufgesetzt. \\ Im Versuch wurde nun die Raumtemperatur gemessen sowie die Temperatur des Wassers und dann das Wasser erhitzt für genau 5 Minuten, welche mit einer Stoppuhr gemessen wurden. 
-\subsection{Ergebnisse}Wir starteten mit einer Anfangstemperatur von $(22,2 ± 0.5) C°$, nach Erhitzung des Wassers für $(300 ± 1)$ s hatte das Wasser eine Temperatur von $(32,3 ± 0.5)$ C°, also eine Temperaturdifferenz von $(10,1 ± 0,5)$ K.Das erhitzte Wasser hatte eine Masse von $(310,7 ± 0,1)$ g und das Netzteil zeigte für die Fliessende Spannung $(15,00 ± 0,01)$ V und für die Stromstärke $(3,40 ± 0,05)$ A an.Nun setzten wir alle erhaltenen Werte in diese Gleichung ein:\begin{equation} \triangle Q = U \cdot I \cdot \triangle t \end{equation}Wir erhielten für $\triangle Q$, also die Wärmeenergie $(15,3 ± 0,3)$ kJ und errechneten daraus mit der Nachfolgenden Gleichung die spezifische Wärmekapazität für Wasser.\begin{equation} C = \frac{U \cdot I \cdot \triangle t }{m \cdot \triangle \vartheta} \end{equation}Für diese erhielten wir $(4,88 ± 0,33) \frac{kJ}{kg\cdot K}$
-%%
-\subsection{Diskussion}Die von uns Erhaltene Wärmekapazität ist einiges höher als der Literaturwert von 4,182 kJ/kgK (Quelle?) Wir erhielten $(4,88 ± 0,33) \frac{kJ}{Kg \cdot K}$ und selbst mit dem Fehler kommen wir nicht an den Literaturwert heran. Wir haben jedoch alle Wärmeverluste noch völlig vernachlässigt und das wird der Hauptgrund sein für diese hohe spezifische Wärmekapazität von Wasser.
-
-\section{Wahlversuche}
-\subsection{Wärmeverluste}Die Wärmeverluste beim Grundversuch lassen sich unter einigen Annahmen noch nachträglich berechnen. Zuerst nehmen wir an, dass sich das Becherglas gleich erhitzt hat wie das Wasser. Dann kann man die aufgenommene Wärme vom Becherglas berechnen mit dessen spezifischen Wärmekapazität, diese wäre bei Glas $(0,91 ± 0,1) \frac{kJ}{kg\cdot K}$. \\ Die zweite Annahme bezieht sich auf die EPS-Isolierung. Dort kann man annehmen, dass die Endtemperatur der Mittelwert zwischen der Endtemperatur des Wassers und der Zimmertemperatur ist. Die spezifische Wärmekapazität von EPS ist $(1,3 ± 0,1) \frac{kJ}{kg\cdot K}$.
-\subsubsection{Ergebnisse und Diskussion}Für die aufgenommene Wärme des Becherglases errechneten wir $(2,56 ± 0,17)$ kJ, für die EPS-Umhüllung $(1,42 ± 0,10)$ kJ. Mit diesen errechneten wir den verbesserten Wert für die spezifische Wärmekapazität des Wassers. \begin{equation} \triangle Q _{\text{effektiv}} = \triangle Q _{\text{zugeführt}} - \triangle Q _{\text{Gefäss}} \end{equation}\begin{equation} C = \frac{\triangle Q}{m \cdot \triangle \vartheta} \end{equation}Für die $\triangle$ Q* erhielten wir $(11,3 ± 0,9)$ kJ und für c* $(3,61 ±  ) \frac{kJ}{kg\cdot K}$Dieser Wert für die spezifische Wärmekapazität von Wasser ist viel zu klein im Vergleich zum Literaturwert. 
-
-\subsection{Wärmeaustausch von Schrot auf Siedetemperatur}Im letzten Teil dieses Praktikums schauten wir uns noch den Wärmeaustausch zwischen Festkörpern und Flüssigkeiten an. Das Endziel war es die spezifische Wärmekapazität von Kupferschrot zu berechnen.
-\subsubsection{Aufbau und Ablauf}Wir füllten das Glasgefäss von vorhin mit kaltem Wasser und massen dessen Temperatur und Gewicht. Die spezifische Wärmekapazität von Wasser konnten wir aus der Literatur entnehmen, diese wäre $4,182 \frac{kJ}{kg\cdot K}$. Anschliessend massen wir das Gewischt des Kupferschrotes und erhitzten dies in einem Erlenmeyerkolben mit siedendem Wasser über einer Gasflamme. Sobald sich keine Tröpfchen mehr am Schrot bildeten hatte dies die Siedetemperatur des Wassers (98 C°). Sobald dies der Fall war wurde das Schrot aus dem Erlenmeyerkolben genommen und sofort ins kalte Wasser getaucht. Nun musste man vorsichtig mit dem Thermometer rühren und die Maximaltemperatur aufschreiben. 
-\subsubsection{Ergebnisse}Mit der maximal erreichten Temperatur und den nötigen Daten liess sich dann die spezifische Wärmekapazität von Kupfer errechnen. Für diese erhielten wir $(0,36 ± 0,09) \frac{kJ}{kg\cdot K}$.
-\subsubsection{Diskussion}Der Literaturwert der spezifischen Wärmekapazität von festem Kupfer ist 0,382 kJ/kgK, was unserem Wert von $(0,36 ± 0,09) \frac{kJ}{kg\cdot K}$ sehr nahe kommt. 
-
-\end{document}
